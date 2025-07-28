@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://b0b65pb648gwo"
+path="res://.godot/imported/Cool Text - The Revenge Of Tung Tung Tung Sahur 485391320756921 (1).png-ad5e98de5e87fdbff26aaab8673331bd.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://scenes/Cool Text - The Revenge Of Tung Tung Tung Sahur 485391320756921 (1).png"
+dest_files=["res://.godot/imported/Cool Text - The Revenge Of Tung Tung Tung Sahur 485391320756921 (1).png-ad5e98de5e87fdbff26aaab8673331bd.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

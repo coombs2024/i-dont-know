@@ -1,45 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://6dirnbuw0pkj"]
+[gd_scene load_steps=2 format=3 uid="uid://6dirnbuw0pkj"]
 
-[ext_resource type="Texture2D" uid="uid://vuae6s5ecbhn" path="res://woody_0.jpg" id="1_kdubu"]
-[ext_resource type="Texture2D" uid="uid://3bhn4quupqnb" path="res://woody_3.jpg" id="4_4d7sh"]
-[ext_resource type="Texture2D" uid="uid://dnvsabt5c26pt" path="res://woody_4.jpg" id="5_ir8iy"]
+[ext_resource type="PackedScene" uid="uid://cqb1xmg3rgy8e" path="res://world.tscn" id="1_wtcfe"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Woody0" type="Sprite2D" parent="."]
-position = Vector2(808, 459)
-scale = Vector2(0.216364, 0.598361)
-texture = ExtResource("1_kdubu")
-offset = Vector2(-31, 55)
-
-[node name="Woody3" type="Sprite2D" parent="Woody0"]
-z_index = 1
-position = Vector2(-42.7209, -326.674)
-scale = Vector2(0.56107, 0.384049)
-texture = ExtResource("5_ir8iy")
-offset = Vector2(-31, 55)
-
-[node name="Woody0" type="Sprite2D" parent="Woody0"]
-position = Vector2(272.689, 0)
-scale = Vector2(0.971314, 1.0019)
-texture = ExtResource("1_kdubu")
-offset = Vector2(-31, 55)
-
-[node name="Woody2" type="Sprite2D" parent="Woody0"]
-position = Vector2(193.647, -198.836)
-scale = Vector2(3.56302, 1.10002)
-texture = ExtResource("4_4d7sh")
-offset = Vector2(-31, 55)
-
-[node name="Woody1" type="Sprite2D" parent="Woody0"]
-z_index = 1
-position = Vector2(258.985, -318.106)
-scale = Vector2(0.662695, 0.426236)
-texture = ExtResource("5_ir8iy")
-offset = Vector2(-31, 55)
-
-[node name="Woody4" type="Sprite2D" parent="Woody0"]
-position = Vector2(138.656, -345.945)
-scale = Vector2(1.60959, 0.758651)
-texture = ExtResource("4_4d7sh")
-offset = Vector2(-31, 55)
+[node name="world" parent="." instance=ExtResource("1_wtcfe")]
