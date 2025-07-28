@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bylabb7fg04o"]
+
+[ext_resource type="Script" uid="uid://c87w2xstmhwpb" path="res://static_body_2d.gd" id="1_ypqmy"]
+[ext_resource type="Texture2D" uid="uid://b4pbq7tlhdv8c" path="res://Mushrooms/AnimatedMushroomRed.png" id="2_dyby8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7r4uk"]
+size = Vector2(290, 148)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+script = ExtResource("1_ypqmy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3.77556, 2.201)
+texture = ExtResource("2_dyby8")
+region_enabled = true
+region_rect = Rect2(28, 40, 72, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-10, 3)
+shape = SubResource("RectangleShape2D_7r4uk")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]

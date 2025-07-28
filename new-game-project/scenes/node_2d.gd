@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 @export var SPEED = 1000.0
 @export var JUMP_VELOCITY = -600.0
-@export var ACCELERATION : float = -100.0
+@export var ACCELERATION : float = -10.0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -20,6 +20,6 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		velocity.x = direction * SPEED
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 00, SPEED)
 
 	move_and_slide()
