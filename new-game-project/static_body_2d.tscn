@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://b4pbq7tlhdv8c" path="res://Mushrooms/AnimatedMushroomRed.png" id="2_dyby8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7r4uk"]
-size = Vector2(237.232, 264.445)
+size = Vector2(183.46, 278.241)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ypqmy"]
-radius = 97.3003
+radius = 35.8758
 height = 262.206
 
 [node name="StaticBody2D" type="StaticBody2D"]
@@ -22,15 +22,14 @@ region_enabled = true
 region_rect = Rect2(28, 40, 72, 64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-20.0191, 118.991)
-rotation = -1.22104
-scale = Vector2(1, 1)
+position = Vector2(-20, 131)
+rotation = -1.54691
 shape = SubResource("RectangleShape2D_7r4uk")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(12, 36)
+position = Vector2(35, -31)
 rotation = 1.94763
 shape = SubResource("CapsuleShape2D_ypqmy")
 
