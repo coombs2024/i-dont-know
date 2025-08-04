@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://bm2w6jo87efgo"]
+[gd_scene load_steps=14 format=4 uid="uid://bm2w6jo87efgo"]
 
 [ext_resource type="Script" uid="uid://bduwm70p5bkif" path="res://main_menu.gd" id="1_06t4h"]
 [ext_resource type="PackedScene" uid="uid://cjiac4k8ktyk0" path="res://character_body_2d.tscn" id="2_7vrkn"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://6thq2pooi15l" path="res://scenes/background 2/1.png" id="7_8qtwp"]
 
 [sub_resource type="Theme" id="Theme_06t4h"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qe12f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nlkkf"]
 texture = ExtResource("5_glbon")
@@ -230,7 +232,7 @@ rotation = -6.28319
 scale = Vector2(2, 1)
 alignment = 1
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="play button" type="Button" parent="VBoxContainer"]
 z_index = 1
 texture_filter = 1
 custom_minimum_size = Vector2(100, 100)
@@ -239,7 +241,41 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = SubResource("Theme_06t4h")
 theme_type_variation = &"gay"
+theme_override_colors/icon_normal_color = Color(0.490196, 0.654902, 1, 1)
+theme_override_colors/font_outline_color = Color(0.490196, 0.654902, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_constants/outline_size = 100
+theme_override_constants/h_separation = 10000
+theme_override_constants/icon_max_width = 1000
+theme_override_constants/align_to_largest_stylebox = 1000
+theme_override_constants/line_spacing = 10000
+theme_override_font_sizes/font_size = 40
 text = "play"
+flat = true
+
+[node name="tutorial button" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_qe12f")
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.235271, 0.476573, 1)
+theme_override_colors/font_hover_color = Color(0.678944, 0.678944, 0.678944, 1)
+theme_override_colors/icon_disabled_color = Color(0.54099, 0.54099, 0.54099, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.564962, 0.564962, 0.564962, 1)
+theme_override_colors/icon_hover_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_colors/icon_pressed_color = Color(0.485703, 0.485704, 0.485703, 1)
+theme_override_colors/icon_focus_color = Color(0.374139, 0.374139, 0.374139, 1)
+theme_override_colors/icon_normal_color = Color(0.617455, 0.617455, 0.617455, 1)
+theme_override_colors/font_outline_color = Color(0.489836, 0.654026, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0.552941, 0.219608, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 75
+text = "Tutorial"
+flat = true
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_7vrkn")]
 texture_filter = 1
@@ -275,4 +311,4 @@ texture = ExtResource("7_8qtwp")
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 energy = 0.62
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/play button" to="." method="_on_button_pressed"]

@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://ckxd0epl1as7e"]
 
-[ext_resource type="Texture2D" uid="uid://b0b65pb648gwo" path="res://scenes/Cool Text - The Revenge Of Tung Tung Tung Sahur 485391320756921 (1).png" id="1_c0dwi"]
+[ext_resource type="Texture2D" uid="uid://b0b65pb648gwo" path="res://scenes/Cool Text - The Revenge Of Tung Tung Tung Sahur 485391320756921 (1).png" id="1_5q4at"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ij6vw"]
-atlas = ExtResource("1_c0dwi")
+atlas = ExtResource("1_5q4at")
 region = Rect2(0, 0, 1001, 500)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ghijl"]
-atlas = ExtResource("1_c0dwi")
+atlas = ExtResource("1_5q4at")
 region = Rect2(0, 500, 1001, 500)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_44cfe"]
