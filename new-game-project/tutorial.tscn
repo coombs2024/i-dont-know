@@ -5465,8 +5465,16 @@ tile_map_data = PackedByteArray("AAAXABUAAAABAAAAAAAgABUAAAACAAAAAAApABUAAAABAAA
 tile_set = SubResource("TileSet_ehuit")
 
 [node name="Orig" type="Sprite2D" parent="."]
+visible = false
 z_index = -10
 texture_filter = 1
 position = Vector2(1313, 25)
 scale = Vector2(-18.587, 15)
 texture = ExtResource("3_ehuit")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 433.0
+offset_top = -84.0
+offset_right = 745.0
+offset_bottom = -16.0
+text = "Hello and welcome to my extreme game"

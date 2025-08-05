@@ -1,7 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://6dirnbuw0pkj"]
+[gd_scene load_steps=3 format=3 uid="uid://6dirnbuw0pkj"]
 
-[ext_resource type="PackedScene" uid="uid://cqb1xmg3rgy8e" path="res://world.tscn" id="1_wtcfe"]
+[sub_resource type="Animation" id="Animation_y32ns"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wtcfe"]
+_data = {
+&"new_animation": SubResource("Animation_y32ns")
+}
 
 [node name="Node2D" type="Node2D"]
 
-[node name="world" parent="." instance=ExtResource("1_wtcfe")]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_wtcfe")
+}
