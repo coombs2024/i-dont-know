@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cf6gjgb2dxbvj" path="res://scenes/Nature Pack 2.1/png/leaves_04.png" id="12_udxuc"]
 [ext_resource type="Texture2D" uid="uid://b2w0nh3hgfsmw" path="res://scenes/Nature Pack 2.1/png/leaves_03.png" id="13_ikiii"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dwbse"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2o6r5"]
 texture = ExtResource("3_036b0")
 margins = Vector2i(1, 0)
 texture_region_size = Vector2i(150, 150)
@@ -5458,7 +5458,7 @@ texture_region_size = Vector2i(150, 150)
 
 [sub_resource type="TileSet" id="TileSet_pkg7o"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_dwbse")
+sources/0 = SubResource("TileSetAtlasSource_2o6r5")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pkg7o"]
 texture = ExtResource("5_036b0")
