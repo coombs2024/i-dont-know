@@ -39,8 +39,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
-size = Vector2(67, 94)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d21ai"]
+radius = 38.0
+height = 96.0
 
 [node name="player" type="CharacterBody2D"]
 platform_wall_layers = 1
@@ -52,18 +53,17 @@ position = Vector2(52.625, 497.125)
 scale = Vector2(3.27344, 2.94531)
 sprite_frames = SubResource("SpriteFrames_kdubu")
 autoplay = "default"
-frame_progress = 0.240514
+frame_progress = 0.40931
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(54.5, 497)
-shape = SubResource("RectangleShape2D_g2els")
+position = Vector2(57, 498)
+shape = SubResource("CapsuleShape2D_d21ai")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(61, 502)
-scale = Vector2(2, 2)
-offset = Vector2(0, -200)
+position = Vector2(58, 499)
+offset = Vector2(0, -50)
 zoom = Vector2(0.5, 0.5)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
