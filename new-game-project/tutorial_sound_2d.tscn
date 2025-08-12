@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://icg6uayp341"]
+
+[ext_resource type="AudioStream" uid="uid://b8omj23w504ro" path="res://20250812_hello_and .mp3" id="1_e62yt"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_e62yt")
+autoplay = true
+max_distance = 4096.0

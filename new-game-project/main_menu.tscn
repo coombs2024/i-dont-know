@@ -312,3 +312,4 @@ texture = ExtResource("7_8qtwp")
 energy = 0.62
 
 [connection signal="pressed" from="VBoxContainer/play button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/tutorial button" to="." method="_on_tutorial_button_pressed"]

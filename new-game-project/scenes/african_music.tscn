@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://xhoocmy517ti"]
+
+[ext_resource type="AudioStream" uid="uid://7duyyqsvsg3k" path="res://african-percussion-297608.mp3" id="1_w3jmq"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_w3jmq")
+autoplay = true
