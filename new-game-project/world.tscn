@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://cqb1xmg3rgy8e"]
+[gd_scene load_steps=18 format=4 uid="uid://cqb1xmg3rgy8e"]
 
 [ext_resource type="PackedScene" uid="uid://do6ixi76wcq73" path="res://scenes/player.tscn" id="1_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://8ebavhokxabv" path="res://audio_stream_player_2d.tscn" id="2_aqk2v"]
@@ -5459,7 +5459,7 @@ texture_region_size = Vector2i(150, 150)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_2o6r5")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pkg7o"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k3n1d"]
 texture = ExtResource("5_036b0")
 7:0/0 = 0
 8:0/0 = 0
@@ -5711,7 +5711,10 @@ texture = ExtResource("5_036b0")
 14:24/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_gbfbk"]
-sources/0 = SubResource("TileSetAtlasSource_pkg7o")
+sources/0 = SubResource("TileSetAtlasSource_k3n1d")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3n1d"]
+size = Vector2(19873, 309)
 
 [node name="world" type="Node2D"]
 position = Vector2(-2, 0)
@@ -5847,3 +5850,11 @@ texture_filter = 1
 position = Vector2(8875, -673)
 scale = Vector2(0.456031, 0.479454)
 flipH = true
+
+[node name="death" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death"]
+position = Vector2(5771.5, 3699)
+shape = SubResource("RectangleShape2D_k3n1d")
+
+[connection signal="body_entered" from="death" to="player2" method="_on_death_body_entered"]

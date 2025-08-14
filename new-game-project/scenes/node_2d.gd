@@ -26,3 +26,15 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 00, SPEED)
 
 	move_and_slide()
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://tutorial.tscn")
+
+
+func _on_area_2d_2_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://main_menu.tscn")
+
+
+func _on_death_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://world.tscn")
