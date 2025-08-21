@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://bm2w6jo87efgo"]
+[gd_scene load_steps=15 format=4 uid="uid://bm2w6jo87efgo"]
 
 [ext_resource type="Script" uid="uid://bduwm70p5bkif" path="res://main_menu.gd" id="1_06t4h"]
 [ext_resource type="PackedScene" uid="uid://cjiac4k8ktyk0" path="res://character_body_2d.tscn" id="2_7vrkn"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dhj6344blp3au" path="res://Basic2DTileSetGrass&Dirt/PNG Version/Basic2DGrass+Dirt.png" id="5_glbon"]
 [ext_resource type="Texture2D" uid="uid://c7yj85kdgn3d1" path="res://tree-set.png" id="6_qe12f"]
 [ext_resource type="Texture2D" uid="uid://6thq2pooi15l" path="res://scenes/background 2/1.png" id="7_8qtwp"]
+[ext_resource type="AudioStream" uid="uid://dc76aylf5ajq4" path="res://spring-forest-nature-332842 (2).mp3" id="8_8qtwp"]
 
 [sub_resource type="Theme" id="Theme_06t4h"]
 
@@ -310,6 +311,11 @@ texture = ExtResource("7_8qtwp")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 energy = 0.62
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_8qtwp")
+autoplay = true
+max_distance = 1e+10
 
 [connection signal="pressed" from="VBoxContainer/play button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/tutorial button" to="." method="_on_tutorial_button_pressed"]
