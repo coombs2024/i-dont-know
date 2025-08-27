@@ -5823,7 +5823,7 @@ scale = Vector2(6, 6)
 position = Vector2(-0.25, 4.41666)
 shape = SubResource("RectangleShape2D_4t6hg")
 
-[connection signal="timeout" from="AudioStreamPlayer2D2/Timer" to="AudioStreamPlayer2D2" method="_on_timer_timeout"]
 [connection signal="timeout" from="AudioStreamPlayer2D2/Timer" to="AudioStreamPlayer2D2" method="_onn_timer_timeout"]
+[connection signal="timeout" from="AudioStreamPlayer2D2/Timer" to="AudioStreamPlayer2D2" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="player" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="player" method="_on_area_2d_2_body_entered"]
