@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://do6ixi76wcq73"]
+[gd_scene load_steps=10 format=3 uid="uid://do6ixi76wcq73"]
 
 [ext_resource type="Script" uid="uid://dkfqrvnm5kuss" path="res://scenes/node_2d.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://d1qg3yu7mixgh" path="res://New Piskel.png" id="2_qhqgy"]
+[ext_resource type="PackedScene" uid="uid://dae6pa22ea2ql" path="res://wasted.tscn" id="3_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0e48y"]
 atlas = ExtResource("2_qhqgy")
@@ -67,3 +68,10 @@ offset = Vector2(0, -50)
 zoom = Vector2(0.5, 0.5)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
+
+[node name="RichTextLabel" parent="Camera2D" instance=ExtResource("3_qhqgy")]
+offset_left = 1001.0
+offset_top = 334.0
+offset_right = 1070.0
+offset_bottom = 357.0
+scale = Vector2(10, 10)
