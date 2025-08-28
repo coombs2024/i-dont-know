@@ -70,8 +70,8 @@ position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
 [node name="RichTextLabel" parent="Camera2D" instance=ExtResource("3_qhqgy")]
-offset_left = 1001.0
-offset_top = 334.0
-offset_right = 1070.0
-offset_bottom = 357.0
-scale = Vector2(10, 10)
+offset_left = -175.0
+offset_top = -56.0
+offset_right = -106.0
+offset_bottom = -33.0
+scale = Vector2(5, 5)
