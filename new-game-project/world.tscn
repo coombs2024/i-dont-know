@@ -5735,7 +5735,7 @@ texture = ExtResource("5_036b0")
 sources/0 = SubResource("TileSetAtlasSource_k3n1d")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k3n1d"]
-size = Vector2(14838, 309)
+size = Vector2(25028, 309)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qktwf"]
 texture = ExtResource("25_4h6ng")
@@ -6999,7 +6999,7 @@ flipH = true
 [node name="death" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="death"]
-position = Vector2(3254, 3699)
+position = Vector2(-1841, 3699)
 shape = SubResource("RectangleShape2D_k3n1d")
 
 [node name="DoorOpen" type="Sprite2D" parent="."]

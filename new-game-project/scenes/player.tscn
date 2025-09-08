@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://do6ixi76wcq73"]
+[gd_scene load_steps=26 format=3 uid="uid://do6ixi76wcq73"]
 
 [ext_resource type="Script" uid="uid://dkfqrvnm5kuss" path="res://scenes/node_2d.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://d1qg3yu7mixgh" path="res://New Piskel.png" id="2_qhqgy"]
 [ext_resource type="PackedScene" uid="uid://dae6pa22ea2ql" path="res://wasted.tscn" id="3_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://obbumso8rkmn" path="res://жабки.png" id="4_dqkch"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0e48y"]
 atlas = ExtResource("2_qhqgy")
@@ -44,6 +45,115 @@ animations = [{
 radius = 38.0
 height = 96.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+atlas = ExtResource("4_dqkch")
+region = Rect2(0, 0, 86, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("4_dqkch")
+region = Rect2(86, 0, 86, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("4_dqkch")
+region = Rect2(172, 0, 86, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
+atlas = ExtResource("4_dqkch")
+region = Rect2(258, 0, 86, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
+atlas = ExtResource("4_dqkch")
+region = Rect2(344, 0, 86, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
+atlas = ExtResource("4_dqkch")
+region = Rect2(430, 0, 86, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2wvv"]
+atlas = ExtResource("4_dqkch")
+region = Rect2(516, 0, 86, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v2ag"]
+atlas = ExtResource("4_dqkch")
+region = Rect2(602, 0, 86, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jej6c"]
+atlas = ExtResource("4_dqkch")
+region = Rect2(688, 0, 86, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1ej7"]
+atlas = ExtResource("4_dqkch")
+region = Rect2(774, 0, 86, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oprun"]
+atlas = ExtResource("4_dqkch")
+region = Rect2(860, 0, 86, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8ls1"]
+atlas = ExtResource("4_dqkch")
+region = Rect2(946, 0, 86, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfm1y"]
+atlas = ExtResource("4_dqkch")
+region = Rect2(1032, 0, 86, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fulsm"]
+atlas = ExtResource("4_dqkch")
+region = Rect2(1118, 0, 86, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4r5pv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjrip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur7pv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4r1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2wvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3v2ag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jej6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1ej7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oprun")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8ls1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfm1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fulsm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="player" type="CharacterBody2D"]
 platform_wall_layers = 1
 script = ExtResource("1_g2els")
@@ -70,8 +180,16 @@ position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
 [node name="RichTextLabel" parent="Camera2D" instance=ExtResource("3_qhqgy")]
-offset_left = -175.0
-offset_top = -56.0
-offset_right = -106.0
-offset_bottom = -33.0
+offset_left = 11.0
+offset_top = -21.0
+offset_right = 80.0
+offset_bottom = 2.0
+scale = Vector2(3, 3)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Camera2D"]
+texture_filter = 1
+position = Vector2(-15, -4.99998)
 scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_4r5pv")
+autoplay = "default"
+frame_progress = 0.415572
