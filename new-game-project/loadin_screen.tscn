@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://ckrlok0t0ipw3"]
+[gd_scene load_steps=18 format=3 uid="uid://ckrlok0t0ipw3"]
 
 [ext_resource type="Texture2D" uid="uid://obbumso8rkmn" path="res://жабки.png" id="1_ntgt7"]
+[ext_resource type="Script" uid="uid://cptyveupt07ah" path="res://loadin_screen.gd" id="2_0r0fx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
 atlas = ExtResource("1_ntgt7")
@@ -62,9 +63,6 @@ region = Rect2(1118, 0, 86, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_qlg0r")
 }, {
 "duration": 1.0,
@@ -105,15 +103,21 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fulsm")
+}, {
+"duration": 1.0,
+"texture": null
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 5.0
 }]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D"]
 texture_filter = 1
+position = Vector2(579, 399)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_4r5pv")
 autoplay = "default"
-frame_progress = 0.675466
+frame = 14
+frame_progress = 1.0
+script = ExtResource("2_0r0fx")

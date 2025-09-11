@@ -7086,5 +7086,5 @@ texture_filter = 1
 position = Vector2(11158, -1407)
 scale = Vector2(7, 7)
 
-[connection signal="body_entered" from="death" to="player2" method="_on_death_body_enteredd"]
 [connection signal="body_entered" from="death" to="player2" method="_on_death_body_entered"]
+[connection signal="body_entered" from="death" to="player2" method="_on_death_body_enteredd"]
