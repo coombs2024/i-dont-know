@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://dqe3w6okmc7lg"]
+
+[ext_resource type="Texture2D" uid="uid://be61lcufnjs0p" path="res://Cappuccino-Assassino.png" id="1_aepcb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ij6vw"]
+atlas = ExtResource("1_aepcb")
+region = Rect2(0, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghijl"]
+atlas = ExtResource("1_aepcb")
+region = Rect2(0, 1024, 1024, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_44cfe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ij6vw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghijl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_dd465"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lhvu3"]
+_data = {
+&"new_animation": SubResource("Animation_dd465")
+}
+
+[node name="cappocchino assassino" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(502, 379)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_44cfe")
+autoplay = "default"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_lhvu3")
+}

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://8ebavhokxabv"]
+
+[ext_resource type="AudioStream" uid="uid://7duyyqsvsg3k" path="res://african-percussion-297608.mp3" id="1_d2dya"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_d2dya")
+autoplay = true
+max_distance = 1e+08

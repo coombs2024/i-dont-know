@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b8omj23w504ro"
+path="res://.godot/imported/20250812_hello_and .mp3-b5a67a767e1838e5e67639803a9c8bfa.mp3str"
+
+[deps]
+
+source_file="res://20250812_hello_and .mp3"
+dest_files=["res://.godot/imported/20250812_hello_and .mp3-b5a67a767e1838e5e67639803a9c8bfa.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

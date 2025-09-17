@@ -1,0 +1,68 @@
+[gd_scene load_steps=9 format=3 uid="uid://bo1cphl7uwj8k"]
+
+[ext_resource type="Script" uid="uid://dkfqrvnm5kuss" path="res://scenes/node_2d.gd" id="1_4dvvg"]
+[ext_resource type="Texture2D" uid="uid://d1qg3yu7mixgh" path="res://New Piskel.png" id="1_6e84v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0e48y"]
+atlas = ExtResource("1_6e84v")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epypp"]
+atlas = ExtResource("1_6e84v")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6r6c"]
+atlas = ExtResource("1_6e84v")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hol4"]
+atlas = ExtResource("1_6e84v")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kdubu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0e48y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epypp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6r6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hol4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d21ai"]
+radius = 38.0
+height = 104.0
+
+[node name="player" type="CharacterBody2D"]
+platform_wall_layers = 1
+script = ExtResource("1_4dvvg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(52.625, 497.125)
+scale = Vector2(3.27344, 2.94531)
+sprite_frames = SubResource("SpriteFrames_kdubu")
+autoplay = "default"
+frame_progress = 0.40931
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(57, 500)
+shape = SubResource("CapsuleShape2D_d21ai")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(58, 499)
+offset = Vector2(0, -150)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true

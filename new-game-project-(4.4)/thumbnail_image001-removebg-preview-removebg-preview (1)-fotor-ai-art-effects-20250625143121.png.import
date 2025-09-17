@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cucf6xw0sdx7"
+path="res://.godot/imported/thumbnail_image001-removebg-preview-removebg-preview (1)-fotor-ai-art-effects-20250625143121.png-ff2bd9b9460c60800a5b532cc8447167.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://thumbnail_image001-removebg-preview-removebg-preview (1)-fotor-ai-art-effects-20250625143121.png"
+dest_files=["res://.godot/imported/thumbnail_image001-removebg-preview-removebg-preview (1)-fotor-ai-art-effects-20250625143121.png-ff2bd9b9460c60800a5b532cc8447167.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://cqb1xmg3rgy8e"]
+[gd_scene load_steps=39 format=4 uid="uid://cqb1xmg3rgy8e"]
 
 [ext_resource type="PackedScene" uid="uid://do6ixi76wcq73" path="res://scenes/player.tscn" id="1_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://8ebavhokxabv" path="res://audio_stream_player_2d.tscn" id="2_aqk2v"]
@@ -6601,10 +6601,16 @@ texture = ExtResource("25_4h6ng")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_qktwf")
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_k83mh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k83mh"]
+size = Vector2(410, 2871.5)
+
 [node name="world" type="Node2D"]
 position = Vector2(-2, 0)
 
 [node name="player2" parent="." instance=ExtResource("1_aqk2v")]
+z_index = 15
 position = Vector2(486, -2677)
 scale = Vector2(3, 3)
 
@@ -7086,5 +7092,13 @@ texture_filter = 1
 position = Vector2(11158, -1407)
 scale = Vector2(7, 7)
 
-[connection signal="body_entered" from="death" to="player2" method="_on_death_body_entered"]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-2111, 4.75)
+physics_material_override = SubResource("PhysicsMaterial_k83mh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -466)
+shape = SubResource("RectangleShape2D_k83mh")
+
 [connection signal="body_entered" from="death" to="player2" method="_on_death_body_enteredd"]
+[connection signal="body_entered" from="death" to="player2" method="_on_death_body_entered"]
