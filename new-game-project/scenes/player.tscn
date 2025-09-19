@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://do6ixi76wcq73"]
+[gd_scene load_steps=16 format=3 uid="uid://do6ixi76wcq73"]
 
 [ext_resource type="Script" uid="uid://dkfqrvnm5kuss" path="res://scenes/node_2d.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://d1qg3yu7mixgh" path="res://New Piskel.png" id="2_qhqgy"]
@@ -63,18 +63,41 @@ animations = [{
 radius = 38.0
 height = 90.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+atlas = ExtResource("2_qhqgy")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("2_qhqgy")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_smehm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="player" type="CharacterBody2D"]
 platform_wall_layers = 1
 script = ExtResource("1_g2els")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="run" type="AnimatedSprite2D" parent="."]
 z_index = -1
 texture_filter = 1
 position = Vector2(52.625, 497.125)
 scale = Vector2(3.27344, 2.94531)
 sprite_frames = SubResource("SpriteFrames_kdubu")
 autoplay = "default"
-frame_progress = 0.40931
+frame = 3
+frame_progress = 0.6588103
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
 z_index = 19
@@ -106,3 +129,8 @@ offset = Vector2(0, -50)
 zoom = Vector2(0.3, 0.3)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
+
+[node name="stop" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_smehm")
+autoplay = "default"
+frame_progress = 0.7431936

@@ -7100,5 +7100,5 @@ physics_material_override = SubResource("PhysicsMaterial_k83mh")
 position = Vector2(0, -466)
 shape = SubResource("RectangleShape2D_k83mh")
 
-[connection signal="body_entered" from="death" to="player2" method="_on_death_body_enteredd"]
 [connection signal="body_entered" from="death" to="player2" method="_on_death_body_entered"]
+[connection signal="body_entered" from="death" to="player2" method="_on_death_body_enteredd"]
